@@ -6,7 +6,11 @@ GET Requests
 -------------------- 
 
 /historical -- to get all available dates
+
+
 /historical/YYYYMMDD -- to get data related to given date (Input can be passed through url)
+
+
 /forecast/YYYYMMDD -- to get weather data of next 5 days(Input can be passed through url)
 
 
