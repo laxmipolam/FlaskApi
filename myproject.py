@@ -11463,7 +11463,7 @@ def forecast(YYYYMMDD):
             for i in range(len(task)):
                 task[i]["TMIN"] = (task[i]["TMIN"] + task1[i]["TMIN"]) / 2
 	        task[i]["TMAX"] = (task[i]["TMAX"] + task1[i]["TMAX"]) / 2
-	        task[i]["DATE"] = date(int(YYYYMMDD[0:4]),int(YYYYMMDD[4:6]),int(YYYYMMDD[6:])) + timedelta(days = i+1))[0:4]
+	        task[i]["DATE"] = date(int(YYYYMMDD[0:4]),int(YYYYMMDD[4:6]),int(YYYYMMDD[6:])) + timedelta(days = i+1)).year + task[i][0:4]
     if len(task)==0:
         abort(404)
     return jsonify(task)
